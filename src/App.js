@@ -1,16 +1,15 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header.js';
-import Footer from './components/Footer.js';
 import Main from './components/Main.js';
-
+import Footer from './components/Footer.js';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Main />
-      <Footer />
+      <Header></Header>
+      <Main></Main>
+      <Footer></Footer>
     </div>
   
   );
