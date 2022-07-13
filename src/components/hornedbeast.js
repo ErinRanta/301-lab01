@@ -3,20 +3,35 @@ import './HornedBeasts.css';
 
 class HornedBeast extends Component{
     constructor(props){
-        super();
+        super(props);
+        this.state = {clicks: 0};
+        this.handleClick = this.handleClick.bind(this)
+        this.title = props.title;
+        this.image_url = props.image_url;
+        this.description = props.description;
+        this._id = props._id;
+        this.keyword = props.keyword;
+        this.horns = props.horns;
+    }
+
+    handleClick() {
+        this.setState({
+            clicks: this.state.clicks + 1
+         });
+         console.log(this.state.clicks);
     }
 
     render(){
         return(
-            <>
-            <li className="Horned-Beast">
-            <h1>{this.props.title}</h1>
-            <img src={this.props.image_url} alt={this.props.description}></img>
-            <p>{this.props.description}</p>
-            </li>
-            </>
+            
+            <div className="animal">
+            <h2>{this.title}</h2>
+            <img onClick={this.handleClick} src={this.image_url} alt={this.description} title={this.title} />
+               <div class="votes"> 
+               <p>{this.state.clicks}</p>
+            </div>
+            <p>{this.description}</p>
+        </div>
         );
-    }
-}
-
+    }}
 export default HornedBeast;

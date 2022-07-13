@@ -1,0 +1,7 @@
+/* @import "./reset.css"; */
+
+img {
+    max-width:300px;
+    max-height:300px;
+}
+
