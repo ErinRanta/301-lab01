@@ -29,4 +29,4 @@ Start time: 9:00
 
 Finish time: Next Day
 
-Actual time needed to complete:2 hours
+Actual time needed to complete: 2 hours
