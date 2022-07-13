@@ -1,7 +1,7 @@
 
 import HornedBeast from './HornedBeast.js'
 import Images from '../data.json';
-// import Images from 'react-bootstrap/Image'
+
 
 const Main = () => {
   let imagesArr = Images;
