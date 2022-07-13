@@ -1,7 +1,7 @@
 import { Component } from "react";
-import './hornedbeasts.css';
+import './HornedBeasts.css';
 
-class hornedBeast extends Component{
+class HornedBeast extends Component{
     constructor(props){
         super();
     }
@@ -9,7 +9,7 @@ class hornedBeast extends Component{
     render(){
         return(
             <>
-            <li className="horned-beast">
+            <li className="Horned-Beast">
             <h1>{this.props.title}</h1>
             <img src={this.props.image_url} alt={this.props.description}></img>
             <p>{this.props.description}</p>
@@ -19,4 +19,4 @@ class hornedBeast extends Component{
     }
 }
 
-export default hornedBeast;
+export default HornedBeast;
