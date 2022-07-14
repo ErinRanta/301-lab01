@@ -2,9 +2,6 @@ import { Component } from "react";
 import './HornedBeasts.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-// import Col from 'react-bootstrap/Col'
-// import Row from 'react-bootstrap/Row';
-// import Container from 'react-bootstrap/Container'
 
 
 
@@ -30,7 +27,7 @@ class HornedBeast extends Component{
                   <Card>
                     <Card className="center"style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={this.props.image_url} />
-                        <Card.Body>
+                         <Card.Body>
                           <Card.Title>{this.props.title}</Card.Title>
                           <Card.Text>{this.props.description}</Card.Text>
                           <Card.Text>Current Votes: {this.state.votes}</Card.Text>

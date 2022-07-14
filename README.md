@@ -30,3 +30,12 @@ Start time: 9:00
 Finish time: Next Day
 
 Actual time needed to complete: 2 hours
+
+Number and name of feature: Feature #1, Display a modal
+Estimate of time needed to complete: 3 Hours
+
+Start time:9:00
+
+Finish time: 11:30
+
+Actual time needed to complete:2.5 hours
