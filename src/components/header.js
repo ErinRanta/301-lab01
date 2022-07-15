@@ -1,5 +1,5 @@
 import { Component } from "react";
-import './Header.css';
+import './header.css';
 import Alert from 'react-bootstrap/Alert';
 
 class Header extends Component{
