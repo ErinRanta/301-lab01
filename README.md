@@ -30,3 +30,5 @@ Start time: 9:00
 Finish time: Next Day
 
 Actual time needed to complete: 2 hours
+
+## I would like to credit the people who have demonstrated their code this week so far, Mandy, Josh, and Rexie. Helped me with technical issues!
