@@ -1,45 +1,28 @@
 import { Component } from "react";
-import './hornedbeasts.css';
+
+//https://react-bootstrap.github.io/components/cards/
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-
-
 class HornedBeast extends Component{
-    constructor(props){
-        super(props);
-        this.state = {clicks: 0};
-        // this.handleClick = this.handleClick.bind(this)
-        
+    constructor(){
+        super();
     }
 
-    handleClick = () => {
-        this.setState({
-            clicks: this.state.clicks + 1
-         });
-         console.log(this.state.clicks);
+    render(){
+        return(
+            <Card className="horned-beast" style={{height: '100%'}}>
+                <Card.Img variant="top" src={this.props.image_url} />
+                <Card.Body>
+                    <Card.Title>{this.props.title}</Card.Title>
+                    <Card.Text>
+                        {this.props.description}
+                    </Card.Text>
+                    <Button variant="primary" size="lg" style={{width: "100%"}}>Vote Favorite</Button>
+                </Card.Body>
+            </Card>
+        );
     }
+}
 
-    
-            render() {
-                return(
-                
-                  <Card>
-                    <Card className="center"style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src={this.props.image_url} />
-                         <Card.Body>
-                          <Card.Title>{this.props.title}</Card.Title>
-                          <Card.Text>{this.props.description}</Card.Text>
-                          <Card.Text>Current Votes: {this.state.votes}</Card.Text>
-                          <Button variant="primary" onClick={this.handleClick}>&hearts; Vote for this Beast</Button>
-                        </Card.Body>
-                      </Card>
-                    </Card>
-                      
-                 
-                
-                
-                );
-              }
-            }
 export default HornedBeast;
