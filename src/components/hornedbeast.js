@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 class HornedBeast extends Component{
+    // eslint-disable-next-line no-useless-constructor
     constructor(){
         super();
     }
