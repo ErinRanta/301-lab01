@@ -1,37 +1,46 @@
-import { Component } from "react";
-import './HornedBeasts.css';
+import Col from 'react-bootstrap/Col'
+import React from "react";
+import "./hornedbeasts.css";
+// import heart from "../img/heart.png";
 
-class HornedBeast extends Component{
-    constructor(props){
+class HornedBeast extends React.Component {
+    constructor(props) {
         super(props);
         this.state = {clicks: 0};
-        this.handleClick = this.handleClick.bind(this)
+        this.handleVoteClick = this.handleVoteClick.bind(this);
         this.title = props.title;
         this.image_url = props.image_url;
         this.description = props.description;
-        this._id = props._id;
+        this.key = props._id;
         this.keyword = props.keyword;
         this.horns = props.horns;
     }
 
-    handleClick() {
+    handleVoteClick() {
         this.setState({
             clicks: this.state.clicks + 1
-         });
-         console.log(this.state.clicks);
+        });
     }
 
-    render(){
-        return(
-            
-            <div className="animal">
-            <h2>{this.title}</h2>
-            <img onClick={this.handleClick} src={this.image_url} alt={this.description} title={this.title} />
-               <div class="votes"> 
-               <p>{this.state.clicks}</p>
+    handleModalClick = () => {
+        this.props.handleModalClick(this);
+    }
+
+    render() {
+    return (
+        <Col className="animal">
+            <h2>{this.title}</h2>  
+            <div className="imageAndClicks">
+                <img onClick={this.handleModalClick} src={this.image_url} alt={this.description} title={this.title} />
+                <div className="clicks" onClick={this.handleVoteClick}>
+                    {/* <img src={heart} alt="heart" /> */}
+                    <p>{this.state.clicks}</p>
+                </div>
             </div>
             <p>{this.description}</p>
-        </div>
+        </Col>
         );
-    }}
+  }
+}
+
 export default HornedBeast;
