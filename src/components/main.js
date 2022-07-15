@@ -1,34 +1,66 @@
 
-import { Component } from "react";
-import HornedBeast from './hornedbeast'
-import beastJSON from '../data.json';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form';
+import HornedBeast from "./hornedbeast.js";
+import React from 'react';
+// import heart from "../img/heart.png";
 
-class Main extends Component{
-    constructor(){
-        super();
-        this.state = {beasts: beastJSON}
+class Main extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {horns: 'any'};
+    this.images = props.images;
+    this.displayArr = this.filterImages(this.state.horns);
+  }
+
+  filterImages(filterValue) {
+
+    if(filterValue === 'any') {
+      this.displayArr = this.images;
+      return this.displayArr;
     }
-    
-   
-    render(){
-        return(
-            <Container fluid>
-                <Row xs={1} sm={2}md={3} lg={4} xl={5}>
-                    {this.state.beasts.map(b => 
-                        <Col>
-                            key={b._id.toString()}
-                            <HornedBeast 
-                                title={b.title}
-                                image_url={b.image_url}
-                                description={b.description}
-                            />
-                        </Col>
-                    )}
-                </Row>  
-            </Container>
+
+    else {
+      this.displayArr = this.images.filter(el => el.horns === parseInt(filterValue));
+    return this.displayArr;
+  }
+  }
+
+ handleSelect(event) {
+  this.filterImages(event.target.value);
+  this.setState({horns: event.target.value});
+  console.log(this.state.horns);
+}
+
+
+
+render () {
+    return (
+        <main>
+          <Container>
+            <Row>
+              <Col className="formCol">
+                {/* <p>Click the <img src={heart} alt="heart" /> to select your favorites!</p> */}
+                <hr />
+                <Form>
+                <Form.Group>
+                  <Form.Label>Filter beasts by number of horns:</Form.Label>
+                  <Form.Select onChange={this.handleSelect.bind(this)}>      
+                    <option value="any">Show me all of them!</option>
+                    <option value="1">One-horned beasts</option>
+                    <option value="2">Two-horned beasts</option>
+                    <option value="3">Three-horned beasts</option>
+                    </Form.Select>
+                </Form.Group>
+              </Form>
+              </Col>
+              {this.displayArr.map(el => <HornedBeast key={el._id} image_url={el.image_url} title={el.title} description={el.description} handleModalClick={this.props.handleModalClick} />)}
+            </Row>
+          </Container>
+        </main>
         );
     }
 }
