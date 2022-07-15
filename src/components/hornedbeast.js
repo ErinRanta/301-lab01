@@ -1,5 +1,5 @@
 import { Component } from "react";
-import './HornedBeasts.css';
+import './hornedBeasts.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 // import Col from 'react-bootstrap/Col'

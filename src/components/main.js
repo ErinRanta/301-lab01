@@ -1,5 +1,5 @@
 
-import HornedBeast from './HornedBeast.js'
+import HornedBeast from './hornedbeast.js'
 import Images from '../data.json';
 
 
