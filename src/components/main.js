@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import HornedBeast from "./hornedbeast.js";
 import React from 'react';
-// import heart from "../img/heart.png";
+
 
 class Main extends React.Component {
 
