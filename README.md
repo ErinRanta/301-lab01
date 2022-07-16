@@ -1,6 +1,5 @@
 # Getting Started with Create React App
 
-
 Number and name of feature: Feature 1, Display Images
 
 Estimate of time needed to complete: 1 hour
