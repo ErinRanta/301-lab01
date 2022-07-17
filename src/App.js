@@ -10,7 +10,7 @@ import SelectedBeast from './components/selectbeast.js';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {modalImgUrl: null, modalImgTitle: null, modalImgDesc: null, viewModal: false};
+       this.state = {modalImgUrl: null, modalImgTitle: null, modalImgDesc: null, viewModal: false};
   }
 
   handleModalClick = (image) => {
@@ -31,6 +31,6 @@ class App extends React.Component {
       </>
       );
     }
-}
+  }
 
 export default App;
