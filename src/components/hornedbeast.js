@@ -3,6 +3,11 @@ import React from "react";
 import "./hornedbeasts.css";
 
 
+
+
+
+
+
 class HornedBeast extends React.Component {
     constructor(props) {
         super(props);
