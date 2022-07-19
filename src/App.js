@@ -27,7 +27,7 @@ class App extends React.Component {
 
 
 
-class App extends React.Component {
+  class extends React.Component {
   constructor(props) {
     super(props);
     this.state = {modalImgUrl: null, modalImgTitle: null, modalImgDesc: null, viewModal: false};
@@ -44,13 +44,12 @@ class App extends React.Component {
 
   render() {
       return (
-        <>
+        <div className="App">
         <Header />
         <Main images={Images} handleModalClick={this.handleModalClick} />
         <SelectedBeast imageUrl={this.state.modalImgUrl} imageTitle={this.state.modalImgTitle} imageDesc={this.state.modalImgDesc} closeModal={this.closeModal} viewModal={this.state.viewModal} />
         <Footer />
-      </>
-      );
+      </div>      );
     }
   }
 
