@@ -59,4 +59,15 @@ Actual time needed to complete:2.5 hours
 
 ## I would like to credit the people who have demonstrated their code this week so far, Mandy, Josh, and Rexie. Helped me with technical issues!
 
+Number and name of feature: Filter by number of horns
+
+Estimated time needed: 3 hours
+
+Start: 6:15
+
+Finish time: 8:45
+
+Actual time needed: 2.5 hours
+
+## I would like to credit my help from Cameron in my submission notes. 
 
